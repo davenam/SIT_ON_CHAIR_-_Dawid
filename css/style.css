@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Regular.eot');
+	src: local('Raleway'), local('Raleway-Regular'),
+		url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Regular.woff2') format('woff2'),
+		url('../fonts/Raleway-Regular.woff') format('woff'),
+		url('../fonts/Raleway-Regular.ttf') format('truetype'),
+		url('../fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Italic.eot');
+	src: local('Raleway Italic'), local('Raleway-Italic'),
+		url('../fonts/Raleway-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Italic.woff2') format('woff2'),
+		url('../fonts/Raleway-Italic.woff') format('woff'),
+		url('../fonts/Raleway-Italic.ttf') format('truetype'),
+		url('../fonts/Raleway-Italic.svg#Raleway-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Bold.eot');
+	src: local('Raleway Bold'), local('Raleway-Bold'),
+		url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Bold.woff2') format('woff2'),
+		url('../fonts/Raleway-Bold.woff') format('woff'),
+		url('../fonts/Raleway-Bold.ttf') format('truetype'),
+		url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Light.eot');
+	src: local('Raleway Light'), local('Raleway-Light'),
+		url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Light.woff2') format('woff2'),
+		url('../fonts/Raleway-Light.woff') format('woff'),
+		url('../fonts/Raleway-Light.ttf') format('truetype'),
+		url('../fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+
+
+html, html a, body {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased; !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+.container {
+    width: 1200px;    
+    margin: 0 auto;
+    
+}
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header .container {
+    background-color: black;
+    height: 40px;
+    padding: 0 70px;
+}
+
+header p {
+    display: block;
+    line-height: 40px;
+    float: left;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header p span {
+    color: #27c7ab;
+}
+
+header nav {
+    float: right;
+
+}
+
+header nav .rodzic {
+    position: relative;
+    
+}
+
+.x {
+    position: absolute;
+    top: 55px;
+    left: -10px;
+    display: none;
+    width: 100px;
+    height: 140px;
+    background: black;
+    padding: 10px;
+}
+
+
+header nav .rodzic .x ul li {
+    color: white;
+    font-size: 10px;
+    list-style-type: none;
+    
+}
+
+.rodzic:hover .x { 
+    display: block; 
+
+}
+
+.y {
+    position: absolute;
+    top: -8px;
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    clear: both;
+    transform:rotate(45deg);
+}
+
+
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #d1d1d1;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header nav ul li a:link, header nav ul li a:visited {
+    color: #d1d1d1;
+    text-decoration: none;
+    
+    
+}
+
+header nav ul li a:hover, header nav ul li a:active {
+    color: red;
+    text-decoration: none;
+    list-style-type: none;    
+}
+
+
+/*<!--    SEKCJA  BANER    -->*/
+
+#banner .container {
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(59%, rgba(231,231,231,1)), color-stop(72%, rgba(226,226,226,1)), color-stop(73%, rgba(225,225,225,1)), color-stop(99%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fefefe', GradientType=0 );
+    height: 500px;
+}
+
+.banner1 {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    margin-top: 100px;
+    padding-left: 90px;
+    
+}
+
+.banner2 {
+    float: right;
+    display: inline-block;
+    width: 50%;
+    margin-top: 100px;
+    padding-right: 200px;
+}
+    
+
+#banner .banner2 h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+h1 span {
+    color: #27c7ab;
+}
+
+#banner .banner2 p {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 260px;
+    height: 50px;
+    background-color: #24baa0;
+    border-radius: 13px;
+    box-shadow: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+
+.buttons {
+    position: relative;
+    width: 100%;
+}
+
+.buttons::before {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    font-size: 70px;
+    content: "<";
+}
+
+.buttons::after {
+    position: absolute;
+    top: 200px;
+    right: 60px;
+    font-size: 70px;
+    content: ">";
+}
+
+
+/*<!--    SEKCJA  MIDDLE   - dwie grafiki i tekst -->*/
+
+
+#middle .containcer {
+    background-color: white;
+    height: 350px;
+
+}
+
+
+.middle-box1 {
+    position: relative;
+    float: left;
+    width: 330px;
+    height: 230px;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 100px;
+    background: transparent url("../images/box1_img.jpg") center / cover no-repeat;
+  
+}    
+
+    
+.white1 {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    margin: 0 auto;
+    width: 330px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.5); 
+    padding-top:17px;
+    padding-left:10px;
+}
+    
+
+.middle-box2 {
+    position: relative;
+    float: left;
+    width: 330px;
+    height: 230px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    background: transparent url("../images/box2_img.jpg") center / cover no-repeat;
+      
+}
+
+
+.white2 {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    margin: 0 auto;
+    width: 330px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.5); 
+    padding-top:17px;
+    padding-left:10px;
+}
+
+
+.middle-box3 {
+    display: block;
+    float: left;
+    width: 330px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.2);  
+    
+}
+
+
+h4 {
+    font-weight: 700;
+    font size: 15px;
+    
+}
+
+
+.greenline {
+    width: 140px;
+    background-color: #27c7ab;
+    height: 7px;
+}
+
+
+.middle-box3 p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+}
+
+/*<!--    SEKCJA BLOKOW CENOWYCH    -->*/
+
+#cennik .container {
+    height: 730px;
+    background-color: #f1f1f1;
+    padding: 66px;
+    
+}
+
+.cennik-title h3 span {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.tripple {
+    padding-top: 50px;
+}
+
+.nice-one {
+    display: block;
+    border: 1px solid #d5d5d5;
+    width: 30%;
+    height: 500px;
+    float: left;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.nice-one2 {
+    display: block;
+    border: 1px solid #d5d5d5;
+    width: 30%;
+    height: 500px;
+    float: left;
+    margin: 0 31px;
+    background-color: #27c7ab;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nice-one3 {
+    display: block;
+    border: 1px solid #d5d5d5;
+    width: 30%;
+    height: 500px;
+    float: left;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 20px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    
+}
+
+
+.menu ul li {
+    color: #b7b7b7;
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+
+.button {
+    width: 122px;
+    height: 35px;
+    background-color: #24baa0;
+    border-radius: 9px;
+    box-shadow: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*<<< ----------------- SEKCJA FORMULARZA -------------------- >>>*/
+
+
+
+
+
+
+
+
+/*<<< ----------------- SEKCJA FOOTER -------------------- >>>*/
+
+
+
