@@ -43,3 +43,7 @@ formularz kontaktowy
 ## License
 
 Warsztaty CodersLab  
+
+# Preview:
+
+![warsztat1](https://cloud.githubusercontent.com/assets/20269246/18136357/52a341c6-6fa5-11e6-8a8c-fd74f156718e.jpg)
