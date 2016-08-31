@@ -79,9 +79,12 @@ html, html a, body {
 }
 
 header .container {
-    background-color: black;
     height: 40px;
     padding: 0 70px;
+}
+
+header {
+    background-color: black;
 }
 
 header p {
@@ -111,25 +114,41 @@ header nav .rodzic {
     position: absolute;
     top: 55px;
     left: -10px;
-    display: none;
     width: 100px;
     height: 140px;
     background: black;
     padding: 10px;
+    display: none;
+    z-index: 1;
+}
+
+/* dodatkowy div przeźroczysty miedzy MENU glownym a wyskakujacym zeby bylo plynne przejscie myszki miedzy tymi dwoma menu */
+
+.xPlus{
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: none;
+    z-index: 0;
 }
 
 
-header nav .rodzic .x ul li {
+.popup {
     color: white;
     font-size: 10px;
     list-style-type: none;
     
 }
 
+/*                               //hover w CSS  
 .rodzic:hover .x { 
     display: block; 
 
 }
+*/
 
 .y {
     position: absolute;
@@ -171,7 +190,18 @@ header nav ul li a:hover, header nav ul li a:active {
 
 /*<!--    SEKCJA  BANER    -->*/
 
-#banner .container {
+.images {
+    display: none;
+}
+
+
+.visible{
+    display: inline-block;
+}
+
+
+
+#banner{
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(231,231,231,1) 59%, rgba(226,226,226,1) 72%, rgba(225,225,225,1) 73%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(59%, rgba(231,231,231,1)), color-stop(72%, rgba(226,226,226,1)), color-stop(73%, rgba(225,225,225,1)), color-stop(99%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
@@ -221,7 +251,7 @@ h1 span {
     margin-bottom: 30px;
 }
 
-button {
+.button {
     width: 260px;
     height: 50px;
     background-color: #24baa0;
@@ -232,6 +262,8 @@ button {
     font-size: 22px;
     margin-left: 60px;
     margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 
@@ -240,11 +272,34 @@ button {
     width: 100%;
 }
 
+.buttons span.span1 {
+    position: absolute;
+    display: block;
+    top: 200px;
+    left: 30px;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+/*    border: 1px solid red;*/
+}
+.buttons span.span2 {
+    position: absolute;
+    display: block;
+    top: 200px;
+    left: 1080px;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+/*    border: 1px solid red;*/
+    z-index: 2;
+}
+
 .buttons::before {
     position: absolute;
     top: 200px;
     left: 60px;
     font-size: 70px;
+    color: #24baa0;
     content: "<";
 }
 
@@ -253,8 +308,11 @@ button {
     top: 200px;
     right: 60px;
     font-size: 70px;
+    color: #24baa0;
     content: ">";
 }
+
+
 
 
 /*<!--    SEKCJA  MIDDLE   - dwie grafiki i tekst -->*/
@@ -360,7 +418,7 @@ h4 {
     height: 730px;
     background-color: #f1f1f1;
     padding: 66px;
-    
+    margin-bottom: 60px;
 }
 
 .cennik-title h3 span {
@@ -368,60 +426,138 @@ h4 {
     font-size: 24px;
 }
 
+.greenline2 {
+    width: 320px;
+    background-color: #27c7ab;
+    height: 7px;
+    margin-bottom: 30px;
+}
+
 .tripple {
     padding-top: 50px;
 }
 
 .nice-one {
+    position: relative;
     display: block;
-    border: 1px solid #d5d5d5;
+    border: 2px solid #d5d5d5;
     width: 30%;
     height: 500px;
     float: left;
     background-color: #f9f9f9;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-right: 30px;
+    
 }
 
-
-.nice-one2 {
-    display: block;
-    border: 1px solid #d5d5d5;
-    width: 30%;
-    height: 500px;
-    float: left;
-    margin: 0 31px;
-    background-color: #27c7ab;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.nice-one3 {
-    display: block;
-    border: 1px solid #d5d5d5;
-    width: 30%;
-    height: 500px;
-    float: left;
-    background-color: #f9f9f9;
-    text-align: center;
-    padding-top: 20px;
-}
 
 h2 {
     text-transform: uppercase;
     font-weight: 300;
+    color: #27c7ab;
+    font-weight: normal;
     
 }
 
+.circle {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    border: 2px solid #d5d5d5;
+    display: block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-color: #f9f9f9;
+    
+}
+
+.circle2 {
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    right: 0;
+    margin: auto auto;
+    border: 0px solid #d5d5d5;
+    display: block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: #c2c2c2;
+    
+}
+
+.circle3 {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 2px solid #d5d5d5;
+    display: block;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    float: left;
+    background-color: #f9f9f9;
+    padding-top: 25px;
+}
+
+.cena {
+    color: #c2c2c2;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cena .eightyfive {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.cena .ninetynine {
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+
+.menu {
+    padding-top: 180px;
+}
 
 .menu ul li {
     color: #b7b7b7;
-    font-size: 20px;
+    font-size: 24px;
     list-style-type: none;
     
 }
 
-.button {
+.grey {
+    width: 100%;
+    background-color: #e4e4e4;
+    line-height: 43px;
+    color: #939393;
+}
+
+.grey-soft {
+    width: 100%;
+    background-color: #f1f1f1;
+    line-height: 43px;
+    color: #787878;
+}
+
+.button2 {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    margin: auto 0;
     width: 122px;
     height: 35px;
     background-color: #24baa0;
@@ -430,15 +566,363 @@ h2 {
     color: white;
     text-transform: uppercase;
     font-size: 16px;
-    margin-left: 60px;
-    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*<<< ----------------- style dla hover  -------------------- >>>*/
+
+.nice-one:hover {
+    position: relative;
+    display: block;
+    border: 2px solid #24baa0;
+    width: 30%;
+    height: 500px;
+    float: left;
+    background-color: #24baa0;
+    text-align: center;
+    padding-top: 30px;
+    margin-right: 30px;
+        
+}
+
+.nice-one:hover h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    font-weight: normal;
+    
+}
+
+
+.nice-one:hover .button2 {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    margin: auto 0;
+    width: 122px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    box-shadow: none;
+    color: #24baa0;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+.nice-one:hover .grey {
+    width: 100%;
+    background-color: #ffffff;
+    line-height: 43px;
+    color: #939393;
+}
+
+
+
+.nice-one:hover .circle3 {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 2px solid #24baa0;
+    display: block;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    float: left;
+    background-color: #f9f9f9;
+    padding-top: 25px;
+}
+
+.nice-one:hover .cena {
+    color: #24baa0;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nice-one:hover .circle {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    border: 0px solid #24baa0;
+    display: block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-color: #24baa0;
+    
+}
+
+.nice-one:hover .circle2 {
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    right: 0;
+    margin: auto auto;
+    border: 2px solid white;
+    display: block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    float: left;
+    background-color: white;
+    
+}
+
+/*<<< ----------------- SEKCJA PRZED FORMULARZEM  -------------------- >>>*/
+.application * {
+    box-sizing: content-box;
+    
+}
+
+.application .container {
+  background-color: #f9f9f9;
+  padding:30px 0;
+  margin-bottom: 85px;
+  margin-top: 85ps;
+  height: 500px
+}
+
+.header {
+    width: 400px;
+}
+
+.application header.align_right{
+  text-align: right;
+}
+
+
+.inline {
+  display:inline-block;
+  width:300px;
+  padding:14px;
+  vertical-align: top;
+}
+
+
+.form {
+  margin-top:50px;
+}
+.drop_down_list {
+  border:1px solid #8de0d2;
+  width: 280px;
+  height:38px;
+  background-color: white;
+  margin-top:22px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.list_label {
+  font-size: 30px;
+  color: #e2e2e2;
+  font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+}
+
+
+.checkbox {
+  position: relative;
+  padding: 30px 30px 30px 0;
+}
+.checkbox input {
+  display: block;
+  opacity: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  cursor: pointer;
+}
+
+.checkbox label {
+  display: block;
+  padding-left: 65px;
+  position: relative;
+  font-size: 28px;
+  color: #cecece;
+  line-height: 120%;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.checkbox label::before, .checkbox label::after {
+  border: 1px solid #27c7ab;
+  content: "";
+  display: block;
+  left: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  top: 0;    
+}
+.checkbox label::after {
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+  border: 0;
+  display: none;
+   
+}
+
+.checkbox input:checked + label::after {
+  display: block;
+}
+
+
+.active {
+  background: url('../images/form_ok.jpg');
+  width: 48px;
+  height: 40px;
+
+}
+.inline_text {
+  display: inline-block;
+  width: 228px;
+  vertical-align: top;
+  margin-top: 30px;
+  margin-left: 15px;
+  color: #aeaeae;
+}
+.image_part img{
+  margin-right: 100px;
+  margin-top: 110px;
+  margin-left: 38px;
 }
 
 
 
 
+.summary_panel {
+  background-color: white;
+  width:400px;
+  height:195px;
+  padding:10px;
+  margin-top: 50px;
+
+}
+
+.application .green_button {
+  background-color: #27c7ab;
+  color: white;
+  text-align:center;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 10px 30px;
+  font-size: 24px;
+  display: inline-block;
+  font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+  margin-top: 20px;
+  margin-left: 29px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.panel_left {
+  display: inline-block;
+  width: 185px;
+  vertical-align: top;
+  padding-bottom:10px;
+  border-bottom:1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_right {
+  display: inline-block;
+  width: 100px;
+  border-left:1px solid #e7e7e7;
+  text-align: right;
+  vertical-align: top;
+  padding-bottom:10px;
+  border-bottom:1px solid #e7e7e7;
+  height: 135px;
+}
+
+.panel_left h4 , .panel_right h4{
+  color: #24baa0;
+  font-size: 23px;
+}
+
+.panel_left span{
+  margin-top:10px;
+  font-size: 22px;
+  color: #5b5a5a;
+  display: block;
+}
+
+.panel_right span {
+  display: block;
+  font-size: 22px;
+  color: #24baa0;
+  margin-top:10px;
+}
+.sum_label{
+  display: inline-block;
+  width: 185px;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #5b5a5a;
+}
+
+.sum {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #24baa0;
+}
+
+.list_arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #24baa0;
+  display:block;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.list_panel {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 288px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  list-style: none;
+  margin: 0;
+  left: 0px;
+  z-index: 2;
+  position: absolute;
+  top: 54px;
+  display:none;
+}
+
+.list_panel li {
+  margin-top:10px;
+  cursor: pointer;
+/*  color: #585858;*/
+}
+
+.option {
+    color: indianred;
+}
+
+.title {
+  height: 30px;
+}
 
 
+.show {
+    display: block;
+}
 
 
 
@@ -446,7 +930,139 @@ h2 {
 /*<<< ----------------- SEKCJA FORMULARZA -------------------- >>>*/
 
 
+#form .container {
+    height: 490px;
+    background-color: white;
+    padding: 66px;
+    margin-bottom: 85px;
+    
+}
+.left-side {
+    width: 65%;
+    float: left;
+}
 
+.left-side-form {
+    font-family: 'Raleway';
+    width: 635px;
+    height: 65px;
+    border: 1px solid #24baa0;
+    opacity: 0.4;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 15px;
+    font-size: 30px;
+    font-weight: 200;
+    font-style: normal;
+    color: #939393;
+    
+}
+
+.left-side-message {
+    font-family: 'Raleway';
+    width: 635px;
+    height: 187px;
+    border: 1px solid #24baa0;
+    opacity: 0.4;
+    padding-left: 15px;
+    font-size: 30px;
+    font-weight: 200;
+    font-style: normal;
+    color: #939393;
+    margin-top: 15px;
+}
+
+.right-side {
+    width: 35%;
+    float: right;
+}
+
+
+.submit {
+    font-family: 'Raleway';
+    margin-top: 30px;
+    width: 340px;
+    height: 70px;
+    background-color: #24baa0;
+    border-radius: 13px;
+    box-shadow: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 18px; 
+}
+
+/*<<< ----------------- SEKCJA CHECKBOX -------------------- >>>*/
+/*
+
+
+checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #24baa0;
+    opacity: 0.4;
+    margin-top: 20px;
+}
+
+.css-checkbox p {
+    font-family: 'Raleway';
+    font-size: 5px;
+    font-weight: 200;
+    font-style: normal;
+    color: #939393;
+}
+
+.css-label.checked{
+	background-image:url(/images/form_ok.jpg);
+}
+
+*/
+.checkbox {
+  position: relative;
+  padding: 30px 30px 30px 0;
+}
+.checkbox input {
+  display: block;
+  opacity: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  cursor: pointer;
+}
+
+.checkbox .label2 {
+  display: block;
+  padding-left: 65px;
+  position: relative;
+  font-size: 16px;
+  color: #6f6b6b;
+  line-height: 120%;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.checkbox label::before, .checkbox label::after {
+  border: 1px solid #27c7ab;
+  content: "";
+  display: block;
+  left: 0;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+  top: 0;    
+}
+.checkbox label::after {
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+  border: 0;
+  display: none;
+   
+}
+
+.checkbox input:checked + label::after {
+  display: block;
+}
 
 
 
@@ -454,5 +1070,36 @@ h2 {
 
 /*<<< ----------------- SEKCJA FOOTER -------------------- >>>*/
 
+footer .container{
+    height: 100%;
+    
+}
 
+.rights {
+    display: block;
+    float: left;
+    font-family: 'Raleway';
+    padding-left: 66px;
+    color: #9b9b9b;
+    line-height: 90px;
+}
+
+.social {
+    display: block;
+    line-height: 90px;
+    float: right;
+}
+
+.logo {
+    padding-right: 100px;
+    font-family: 'Raleway';
+    display: block;
+    line-height: 90px;
+    font-size: 20px;
+    float: right;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 40px;
+}
 
